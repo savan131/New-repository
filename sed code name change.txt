@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Check if both arguments are provided
+if [ $# -ne 2 ]; then
+  echo "Usage: bash sed.sh <name> <output_file>"
+  exit 1
+fi
+
+# Arguments
+NAME="$1"
+OUTPUT_FILE="$2"
+
+# Use sed to replace <NAME> with the first argument, and write to the specified output file
+sed "s/<NAME>/$NAME/g" > "$OUTPUT_FILE"
+
+
+script execute
+
+chmod +x sed.sh
+
+running the script to execute
+
+bash sed.sh "John Doe" "output.txt"
+
+This will replace <NAME> with John Doe and write the result to output.txt
